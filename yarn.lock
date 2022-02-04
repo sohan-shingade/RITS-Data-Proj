@@ -2962,7 +2962,7 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.178.tgz#341f6d2247db528d4a13ddbb374bcdc80406f4f8"
   integrity sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==
 
-"@types/mapbox-gl@*", "@types/mapbox-gl@^2.0.3":
+"@types/mapbox-gl@^2.0.3":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@types/mapbox-gl/-/mapbox-gl-2.6.0.tgz#f9e8e963d5a11eba9d914d95ef8a00d015ca8732"
   integrity sha512-lHdITzC0IVn9+Pq6WFkkK0N6rUKIqxsdrNeixiQdvROFn2Aeu3TDvhpuag1IdengL5WGGRuEhK6m6HB916ReLw==
@@ -3020,16 +3020,6 @@
   integrity sha512-f96K3k+24RaLGVu/Y2Ng3e1EbZ8/cVJvypZWd7cy0ofCBaf2lcM46xNhycMZ2xGwbBjRql7hOlZ+e2WlJ5MH3Q==
   dependencies:
     "@types/react" "*"
-
-"@types/react-map-gl@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@types/react-map-gl/-/react-map-gl-6.1.1.tgz#f18a936ae0fa1225f96c1509159dd6c8385a69dd"
-  integrity sha512-Og0tZXBOK1CmuFpxnHRiEQ5B5G5NNHSc9kwOF3XLBNCWmwsouDX4nkDYfLHM7e6CyY2SJHijAHY7w3x7cEvdng==
-  dependencies:
-    "@types/geojson" "*"
-    "@types/mapbox-gl" "*"
-    "@types/react" "*"
-    "@types/viewport-mercator-project" "*"
 
 "@types/react@*", "@types/react@^17.0.15", "@types/react@^17.0.38":
   version "17.0.38"
@@ -3095,13 +3085,6 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.2.tgz#fc25ad9943bcac11cceb8168db4f275e0e72e756"
   integrity sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==
-
-"@types/viewport-mercator-project@*":
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/@types/viewport-mercator-project/-/viewport-mercator-project-6.1.2.tgz#81c28c868625bb83d373a2b726cebb7958a71d8e"
-  integrity sha512-21U4s61ZMUx95F2Uc9DpXBlcSKlrkeChM+hbGWmpz8HtL+zwl/zP5pJarJmxKv/764iR9xf5870jYZ8Mby5xuQ==
-  dependencies:
-    gl-matrix "^3.2.0"
 
 "@types/warning@^3.0.0":
   version "3.0.0"
@@ -4654,7 +4637,7 @@ decimal.js@^10.2.1:
   resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.3.1.tgz#d8c3a444a9c6774ba60ca6ad7261c3a94fd5e783"
   integrity sha512-V0pfhfr8suzyPGOx3nmq4aHqabehUZn6Ch9kyFpV79TGDTWFmHqUqXdabR7QHqxzrYolF4+tVmJhUG4OURg5dQ==
 
-deck.gl@^8.6.5:
+deck.gl@^8.6.8:
   version "8.6.8"
   resolved "https://registry.yarnpkg.com/deck.gl/-/deck.gl-8.6.8.tgz#4f8beec5f8b74d974a50c715610de4722efe93f2"
   integrity sha512-oag+fBMsx4hj05aL/FpxCjZV4tQdSHPkjAEaJ8QvJ6ecrD0FbaJ9W1H2ZNJJchz0odeOSRZzYUmQXtDduCdmFg==
@@ -5774,7 +5757,7 @@ get-symbol-description@^1.0.0:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.1"
 
-gl-matrix@^3.0.0, gl-matrix@^3.2.0, gl-matrix@^3.3.0:
+gl-matrix@^3.0.0, gl-matrix@^3.3.0:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-3.4.3.tgz#fc1191e8320009fd4d20e9339595c6041ddc22c9"
   integrity sha512-wcCp8vu8FT22BnvKVPjXa/ICBWRq/zjFfdofZy1WSpQZpphblv12/bOQLBC1rMM7SGOFS9ltVmKOHil5+Ml7gA==

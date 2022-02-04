@@ -1,18 +1,15 @@
+import { ChevronDownIcon } from '@chakra-ui/icons';
 import {
-  Heading,
-  Menu,
-  MenuButton, MenuItem, MenuList, Text
+  Button, Heading, HStack, Menu,
+  MenuButton, MenuItem, MenuList, Spacer, VStack
 } from '@chakra-ui/react';
-import { Button } from '@chakra-ui/react'
-import { Flex, Spacer, HStack, VStack } from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
-import { GeoJsonLayer } from '@deck.gl/layers';
+import { GeoJsonLayer, PolygonLayer } from '@deck.gl/layers';
 import DeckGL from '@deck.gl/react';
 import React, { useEffect, useState } from 'react';
 import { StaticMap } from 'react-map-gl';
-import mapboxgl from "mapbox-gl";
-mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+// mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 interface CensusReporter_API {
     table_ids : string;
@@ -123,7 +120,7 @@ export default function Map({data_ids, multiTable, viewport, mapsouce}: MapProps
               beans = Object.entries(newjson["tables"]).map(([key, val]:any, i:any) => {
                 return {id: key, label: val.title}
               })
-              console.log(beans, "beans");
+              // console.log(beans, "beans");
               
             }
             console.log(mapjson, "mapjson");
@@ -198,10 +195,10 @@ export default function Map({data_ids, multiTable, viewport, mapsouce}: MapProps
             feature.properties = { ...feature.properties, 
               curData: ((json.data[key][row].estimate[`${row}005`] + json.data[key][row].estimate[`${row}006`] + json.data[key][row].estimate[`${row}010`]  + json.data[key][row].estimate[`${row}011`]))
             };
-            console.log(feature, "feature.properties.curData");
+            // console.log(feature, "feature.properties.curData");
             
             if(newMax < (json.data[key][row].estimate[`${row}005`] + json.data[key][row].estimate[`${row}006`] + json.data[key][row].estimate[`${row}010`]  + json.data[key][row].estimate[`${row}011`])){
-              console.log("new max", (json.data[key][row].estimate[`${row}005`] + json.data[key][row].estimate[`${row}006`] + json.data[key][row].estimate[`${row}010`]  + json.data[key][row].estimate[`${row}011`]), "old max", newMax);
+              // console.log("new max", (json.data[key][row].estimate[`${row}005`] + json.data[key][row].estimate[`${row}006`] + json.data[key][row].estimate[`${row}010`]  + json.data[key][row].estimate[`${row}011`]), "old max", newMax);
               newMax = (json.data[key][row].estimate[`${row}005`] + json.data[key][row].estimate[`${row}006`] + json.data[key][row].estimate[`${row}010`]  + json.data[key][row].estimate[`${row}011`])
             }
             
@@ -209,7 +206,6 @@ export default function Map({data_ids, multiTable, viewport, mapsouce}: MapProps
         }
         return feature;
       })})
-      console.log(newMax, "maAMAMAMAx");
       
       setMax(newMax);
     }
@@ -278,6 +274,8 @@ export default function Map({data_ids, multiTable, viewport, mapsouce}: MapProps
               </>
             )}
           </Menu>
+          
+
           <Spacer/>
       </VStack>
       );
